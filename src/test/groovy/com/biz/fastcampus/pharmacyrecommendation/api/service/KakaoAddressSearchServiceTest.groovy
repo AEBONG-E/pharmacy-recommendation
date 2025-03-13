@@ -21,7 +21,7 @@ class KakaoAddressSearchServiceTest extends AbstractIntegrationContainerBaseTest
 
     def "주소값이 valid 하다면, requestAddressSearch 메소드는 정상적으로 document 를 반환한다."() {
         given:
-        def address = "대구광역시 남구 현충로16길 1"
+        def address = "서울특별시 성북구 종암동"
 
         when:
         def result = kakaoAddressSearchService.requestAddressSearch(address)
