@@ -42,6 +42,7 @@ public class PharmacyRepositoryService {
                 pharmacy.changePharmacyAddress("서울특별시 광진구"));
     }
 
+    @Transactional(readOnly = true)
     public List<Pharmacy> findAll() {
         return pharmacyRepository.findAll();
     }
