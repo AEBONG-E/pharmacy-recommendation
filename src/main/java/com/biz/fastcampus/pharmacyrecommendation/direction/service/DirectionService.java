@@ -64,7 +64,7 @@ public class DirectionService {
                                             pharmacyDto.getLatitude(), pharmacyDto.getLongitude())
                             )
                             .build())
-                .filter(direction -> ((Direction) direction).getDistance() <= RADIUS_KM)
+                .filter(direction -> direction.getDistance() <= RADIUS_KM)
                 .sorted(Comparator.comparing(Direction::getDistance))
                 .limit(MAX_SEARCH_COUNT)
                 .collect(Collectors.toList());
