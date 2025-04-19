@@ -2,9 +2,7 @@ package com.biz.fastcampus.pharmacyrecommendation.api.pharmacy.cache
 
 import com.biz.fastcampus.pharmacyrecommendation.AbstractIntegrationContainerBaseTest
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.redis.core.HashOperations
 import org.springframework.data.redis.core.RedisTemplate
-import org.springframework.data.redis.core.SetOperations
 
 class RedisTemplateTest extends AbstractIntegrationContainerBaseTest {
 
