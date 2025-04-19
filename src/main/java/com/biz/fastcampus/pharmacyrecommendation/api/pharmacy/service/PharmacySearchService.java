@@ -1,5 +1,6 @@
 package com.biz.fastcampus.pharmacyrecommendation.api.pharmacy.service;
 
+import com.biz.fastcampus.pharmacyrecommendation.api.pharmacy.cache.PharmacyRedisTemplateService;
 import com.biz.fastcampus.pharmacyrecommendation.api.pharmacy.dto.PharmacyDto;
 import com.biz.fastcampus.pharmacyrecommendation.api.pharmacy.entity.Pharmacy;
 import lombok.RequiredArgsConstructor;
@@ -15,10 +16,14 @@ import java.util.stream.Collectors;
 public class PharmacySearchService {
 
     private final PharmacyRepositoryService pharmacyRepositoryService;
+    private final PharmacyRedisTemplateService pharmacyRedisTemplateService;
 
     public List<PharmacyDto> searchPharmacyDtoList() {
 
         // redis
+        List<PharmacyDto> pharmacyDtoList = pharmacyRedisTemplateService.findAll();
+
+        if (!pharmacyDtoList.isEmpty()) return pharmacyDtoList;
 
         // db
         return this.pharmacyRepositoryService.findAll()
