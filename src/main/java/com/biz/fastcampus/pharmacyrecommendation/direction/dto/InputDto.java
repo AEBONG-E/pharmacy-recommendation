@@ -1,12 +1,10 @@
 package com.biz.fastcampus.pharmacyrecommendation.direction.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 @Getter
-@Builder
-@AllArgsConstructor
+@Setter
+@NoArgsConstructor
 public class InputDto {
     private String address;
 }
