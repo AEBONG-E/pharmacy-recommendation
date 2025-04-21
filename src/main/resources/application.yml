@@ -58,7 +58,7 @@ spring:
 
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://pharmacy-recommendation:3306/pharmacy-recommendation?useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mariadb://pharmacy-recommendation-database:3306/pharmacy-recommendation?useSSL=false&allowPublicKeyRetrieval=true
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
 
